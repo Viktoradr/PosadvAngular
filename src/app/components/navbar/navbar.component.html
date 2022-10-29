@@ -1,0 +1,25 @@
+<mat-toolbar class="mat-elevation-z2">
+  <!-- <i class="fa-solid fa-mug-hot fa-xl"></i> -->
+
+  <div class="sidebar-horizontal">
+    <div>
+      <a [routerLink]="['/admin/meu-plano']" routerLinkActive="router-link-active" mat-button>Meu Plano</a>
+      <mat-divider vertical></mat-divider>
+      <a [routerLink]="['/admin/configuracao']" routerLinkActive="router-link-active" mat-button>Configuração</a>
+    </div>
+
+    <div class="profile">
+      <mat-divider vertical></mat-divider>
+      <a [routerLink]="['/admin/perfil']" routerLinkActive="router-link-active">
+        <mat-icon
+          aria-hidden="false"
+          aria-label="Icon profile"
+          matTooltip="Meus dados"
+          matTooltipPosition="left"
+          fontIcon="account_box">account_box</mat-icon>
+      </a>
+    </div>
+  </div>
+
+
+</mat-toolbar>

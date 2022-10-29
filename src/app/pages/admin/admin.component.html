@@ -1,0 +1,15 @@
+<mat-drawer-container>
+  <mat-drawer mode="side" opened>
+    <sidebar></sidebar>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <navbar></navbar>
+    <ng-container *ngIf="loading">
+      <mat-progress-bar mode="determinate" [value]="progressCount"></mat-progress-bar>
+    </ng-container>
+    <main class="container-fluid" [style.height]="sanitizer.bypassSecurityTrustStyle('calc(100% - 128px)')">
+      <router-outlet></router-outlet>
+    </main>
+  </mat-drawer-content>
+</mat-drawer-container>

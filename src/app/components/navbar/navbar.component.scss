@@ -1,0 +1,49 @@
+.mat-toolbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  i {
+    margin-right: 25px;
+    color: #cecece;
+  }
+
+  .sidebar-horizontal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .profile {
+      mat-divider {
+        margin-right: 10px;
+      }
+
+      a {
+        padding: 0px;
+        margin: 0px;
+        height: 35px;
+
+        mat-icon {
+          height: 35px;
+          width: 35px;
+          font-size: 35px;
+          cursor: pointer;
+          transition: all ease 1s;
+          color: #cecece;
+
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+}

@@ -1,1 +1,108 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap');
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Montserrat', sans-serif; }
+
+.pointer {
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 15px;
+
+  &.end {
+    flex-direction: row-reverse !important;
+  }
+
+  &.between {
+    justify-content: space-between !important;
+  }
+}
+
+form {
+
+  mat-form-field {
+    width: 100% !important;
+  }
+  .mat-form-field-wrapper {
+    padding-bottom:  5px !important;
+  }
+  .mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: .6em 0 .6em 0 !important;
+  }
+  .mat-form-field-appearance-outline .mat-form-field-label {
+    top: 1.54375em  !important;
+  }
+  .mat-form-field-appearance-outline.mat-form-field-can-float .mat-input-server:focus+.mat-form-field-label-wrapper .mat-form-field-label,
+  .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+    transform: translateY(-1.2em) scale(.75) !important;
+  }
+  .mat-form-field-appearance-outline .mat-form-field-prefix,
+  .mat-form-field-appearance-outline .mat-form-field-suffix {
+    top: .14em !important;
+  }
+}
+
+mat-divider.mat-divider-vertical {
+  height: 20px;
+}
+
+table {
+  width: 100%;
+}
+
+.animate-shake {
+  -webkit-animation-name: fa-shake;
+  animation-name: fa-shake;
+  -webkit-animation-duration: var(--fa-animation-duration,1s);
+  animation-duration: var(--fa-animation-duration,1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count,infinite);
+  animation-iteration-count: var(--fa-animation-iteration-count,infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing,linear);
+  animation-timing-function: var(--fa-animation-timing,linear);
+}
+
+.animate-flip {
+  -webkit-animation-name: fa-flip;
+  animation-name: fa-flip;
+  -webkit-animation-delay: var(--fa-animation-delay,0s);
+  animation-delay: var(--fa-animation-delay,0s);
+  -webkit-animation-direction: var(--fa-animation-direction,normal);
+  animation-direction: var(--fa-animation-direction,normal);
+  -webkit-animation-duration: var(--fa-animation-duration,1s);
+  animation-duration: var(--fa-animation-duration,1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count,infinite);
+  animation-iteration-count: var(--fa-animation-iteration-count,infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing,ease-in-out);
+  animation-timing-function: var(--fa-animation-timing,ease-in-out);
+}
+
+.animate-kick {
+  -webkit-animation-name: fa-bounce;
+  animation-name: fa-bounce;
+  -webkit-animation-delay: var(--fa-animation-delay,0s);
+  animation-delay: var(--fa-animation-delay,0s);
+  -webkit-animation-direction: var(--fa-animation-direction,normal);
+  animation-direction: var(--fa-animation-direction,normal);
+  -webkit-animation-duration: var(--fa-animation-duration,1s);
+  animation-duration: var(--fa-animation-duration,1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count,infinite);
+  animation-iteration-count: var(--fa-animation-iteration-count,infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing,cubic-bezier(.28,.84,.42,1));
+  animation-timing-function: var(--fa-animation-timing,cubic-bezier(.28,.84,.42,1));
+}
+
+.animate-beat-fade {
+  -webkit-animation-name: fa-beat-fade;
+  animation-name: fa-beat-fade;
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count,infinite);
+  animation-iteration-count: var(--fa-animation-iteration-count,infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing,cubic-bezier(.4,0,.6,1));
+  animation-timing-function: var(--fa-animation-timing,cubic-bezier(.4,0,.6,1));
+  animation-delay: var(--fa-animation-delay,0s);
+  animation-duration: var(--fa-animation-duration,1s);
+}

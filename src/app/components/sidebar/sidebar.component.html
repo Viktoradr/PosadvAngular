@@ -1,0 +1,102 @@
+<div class="sidebar-wrapper">
+  <div class="logo">
+    <h1>POS ADV</h1>
+    <h5>Controle Jurídico</h5>
+  </div>
+
+  <mat-list class="menu-list-principal">
+    <mat-list-item>
+      <a mat-button [routerLink]="['/admin/home']" routerLinkActive="router-link-active">
+        <mat-icon
+          aria-hidden="false"
+          aria-label="Icon inicio"
+          fontIcon="home"
+          fontSet="material-icons-outlined"
+          >home</mat-icon
+        >
+        Home
+      </a>
+    </mat-list-item>
+    <mat-list-item>
+      <a mat-button [routerLink]="['/admin/notificacoes']" routerLinkActive="router-link-active">
+        <mat-icon
+          [class.animate-shake]="showAnimationShake"
+          aria-hidden="false"
+          aria-label="Icon notificações"
+          fontIcon="notifications"
+          [fontSet]="qtdNotificacoes === 0 ? 'material-icons-outlined' : 'material-icons-round'"
+          [matBadge]="qtdNotificacoes > 99 ? '99+' : qtdNotificacoes"
+          [matBadgeHidden]="qtdNotificacoes === 0"
+          matBadgeColor="warn"
+          >notifications</mat-icon
+        >Notificações
+        <span class="cdk-visually-hidden">
+          Notificações {{qtdNotificacoes}}
+        </span>
+      </a>
+    </mat-list-item>
+    <mat-list-item>
+      <a mat-button [routerLink]="['/admin/metas']" routerLinkActive="router-link-active">
+        <mat-icon
+          aria-hidden="false"
+          aria-label="Icon metas"
+          fontIcon="notifications"
+          [fontSet]="qtdMetas === 0 ? 'material-icons-outlined' : 'material-icons-round'"
+          [matBadge]="qtdMetas > 99 ? '99+' : qtdMetas"
+          [matBadgeHidden]="qtdMetas === 0"
+          matBadgeColor="accent"
+          >data_exploration</mat-icon
+        >Metas
+      </a>
+    </mat-list-item>
+  </mat-list>
+
+  <mat-divider></mat-divider>
+
+    <ng-container  *ngFor="let menu of menus">
+      <mat-accordion>
+        <mat-expansion-panel
+          #panel
+          hideToggle
+          (opened)="menu.panelOpenState = true"
+          (closed)="menu.panelOpenState = false"
+          (mouseleave)="closePanel(panel)">
+          <mat-expansion-panel-header >
+            <mat-panel-title>{{menu.panelTitle}}</mat-panel-title>
+            <mat-icon *ngIf="!menu.panelOpenState">keyboard_arrow_right</mat-icon>
+            <mat-icon *ngIf="menu.panelOpenState">keyboard_arrow_down</mat-icon>
+          </mat-expansion-panel-header>
+
+          <mat-list>
+            <mat-list-item *ngFor="let item of menu.itens">
+              <a mat-button [routerLink]="item.link" routerLinkActive="router-link-active">
+                <mat-icon
+                  aria-hidden="false"
+                  [attr.aria-label]="item.ariaLabel"
+                  [fontIcon]="item.fontIcon"
+                  [fontSet]="item.fontSet"
+                  >{{item.fontIcon}}</mat-icon
+                >{{item.title}}
+              </a>
+            </mat-list-item>
+          </mat-list>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </ng-container>
+
+</div>
+
+<footer>
+  <ng-container *ngFor="let item of midias">
+    <button mat-icon-button
+      [attr.aria-label]="item.label"
+      (mouseenter)="item.showAnimation = true"
+      (mouseleave)="item.showAnimation = false"
+      (click)="goTo(item.link)">
+
+      <i class="fa-brands fa-xl"
+        [ngClass]="item.icon"
+        [class.animate-flip]="item.showAnimation"></i>
+    </button>
+  </ng-container>
+</footer>

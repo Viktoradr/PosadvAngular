@@ -1,0 +1,50 @@
+.widgets {
+  mat-card {
+    border-radius: 25px;
+    padding: 25px;
+    width: 100%;
+
+    mat-icon {
+      color: teal;
+      height: 50px;
+      width: 50px;
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 30px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    h5 {
+      letter-spacing: 1px;
+      font-size: 12px;
+      font-weight: lighter;
+      word-wrap: break-word;
+    }
+  }
+}
+
+
+.tarefas {
+
+  mat-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  mat-list {
+    mat-icon {
+      background-color: teal;
+      padding: 10px;
+      border-radius: 40%;
+    }
+
+    div:last-child {
+      color: #999;
+    }
+  }
+}

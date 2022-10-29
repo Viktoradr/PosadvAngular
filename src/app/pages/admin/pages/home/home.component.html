@@ -1,0 +1,93 @@
+<breadcrumb [params]="params"></breadcrumb>
+
+<div class="row">
+  <div class="col-7">
+    <div class="widgets">
+
+      <div class="row">
+        <div class="col-3">
+          <mat-card>
+            <mat-icon
+              aria-hidden="false"
+              aria-label="Icon carteira"
+              fontIcon="wallet"
+              fontSet="material-icons-outlined">wallet</mat-icon>
+
+            <h1>R$ 100.00</h1>
+            <h5>Total em caixa</h5>
+          </mat-card>
+        </div>
+        <div class="col-3">
+          <mat-card>
+            <mat-icon
+              aria-hidden="false"
+              aria-label="Icon carteira"
+              fontIcon="balance"
+              fontSet="material-icons-outlined">balance</mat-icon>
+
+            <h1>50</h1>
+            <h5>Processos novos</h5>
+          </mat-card>
+        </div>
+        <div class="col-3">
+          <mat-card>
+            <mat-icon
+              aria-hidden="false"
+              aria-label="Icon carteira"
+              fontIcon="account_balance"
+              fontSet="material-icons-outlined">account_balance</mat-icon>
+
+            <h1>100</h1>
+            <h5>Total de processo</h5>
+          </mat-card>
+        </div>
+        <div class="col-3">
+          <mat-card>
+            <mat-icon
+              aria-hidden="false"
+              aria-label="Icon carteira"
+              fontIcon="timer"
+              fontSet="material-icons-outlined">timer</mat-icon>
+
+            <h1>2</h1>
+            <h5>Prazos a serem cumpridos</h5>
+          </mat-card>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="col-5">
+    <div class="tarefas">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>
+            Yout to-Do list
+          </mat-card-title>
+
+          <button mat-icon-button aria-label="add to-do list">
+            <mat-icon
+              aria-hidden="false"
+              aria-label="Icon inicio"
+              fontIcon="add_box"
+              >add_box</mat-icon>
+          </button>
+        </mat-card-header>
+
+        <mat-list>
+          <mat-list-item *ngFor="let folder of [1,2,3,4,5,6,7]">
+            <mat-icon mat-list-icon fontSet="material-icons-outlined">folder</mat-icon>
+            <div mat-line>tese</div>
+            <div mat-line>qweqweqwe</div>
+          </mat-list-item>
+        </mat-list>
+      </mat-card>
+    </div>
+  </div>
+
+  <div class="col-12">
+
+  </div>
+</div>
+
