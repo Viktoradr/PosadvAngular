@@ -3,6 +3,8 @@ mat-card {
   flex-direction: row;
   align-items: center;
   margin-bottom: 15px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 
   mat-divider {
     margin-left: 15px;
@@ -14,13 +16,14 @@ mat-card {
     margin: 0px;
   }
 
-
   mat-card-title {
     font-weight: 400;
+    font-size: 1.2em;
   }
 
   mat-card-subtitle {
     letter-spacing: 1px;
     font-weight: lighter;
+    padding-top: 2px;
   }
 }

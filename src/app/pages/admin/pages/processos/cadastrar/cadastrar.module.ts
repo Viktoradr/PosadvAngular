@@ -7,7 +7,12 @@ import { RouterModule } from '@angular/router';
 import { ContainerModule } from './../../../../../components/container/container.module';
 
 import { BreadcrumbModule } from 'src/app/components/breadcrumb/breadcrumb.module';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
+import { FormAMModule } from 'src/app/shared/angular-material/angular-material.module';
+import { SnackModule } from 'src/app/provider/snack/snack.module';
+import { MatListModule } from '@angular/material/list';
+import {MatStepperModule} from '@angular/material/stepper';
 
 @NgModule({
   declarations: [
@@ -18,6 +23,13 @@ import { BreadcrumbModule } from 'src/app/components/breadcrumb/breadcrumb.modul
     RouterModule.forChild([{ path: '', component: CadastrarComponent }]),
     BreadcrumbModule,
     ContainerModule,
+    ReactiveFormsModule,
+    ContainerModule,
+    FormAMModule,
+    MatIconModule,
+    SnackModule,
+    MatListModule,
+    MatStepperModule,
   ]
 })
 export class CadastrarModule { }

@@ -1,5 +1,56 @@
 <breadcrumb [params]="params"></breadcrumb>
 
-<container>
-  <p>cadastrar processo works!</p>
+<container [auto]=true>
+
+  <form [formGroup]="formulario">
+    <div class="row">
+
+      <div class="col-xs-12 col-md-4">
+        <mat-form-field appearance="outline" color="accent">
+          <mat-label>Tipo de Acordo</mat-label>
+          <input matInput placeholder="" formControlName="tipo">
+          <mat-icon matSuffix>bookmark_added</mat-icon>
+        </mat-form-field>
+      </div>
+
+      <div class="col-xs-12 col-md-4">
+        <mat-form-field appearance="outline" color="accent">
+          <mat-label>Número do Processo</mat-label>
+          <input matInput placeholder="0000000-00.0000.0.00.0000" formControlName="numeroProcesso">
+          <mat-icon matSuffix>balance</mat-icon>
+        </mat-form-field>
+      </div>
+
+      <div class="col-xs-12 col-md-4">
+        <mat-form-field appearance="outline" color="accent" (click)="picker.open()">
+          <mat-label>Data do Prazo</mat-label>
+          <mat-date-range-input [rangePicker]="picker">
+            <input matStartDate placeholder="Data Início" formControlName="dataInicio">
+            <input matEndDate placeholder="Data Fim" formControlName="dataFim">
+          </mat-date-range-input>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-date-range-picker touchUi #picker></mat-date-range-picker>
+        </mat-form-field>
+      </div>
+    </div>
+  </form>
+
+  <div class="buttons end">
+    <button mat-raised-button color="primary">Consultar</button>
+  </div>
 </container>
+
+<container [auto]=true>
+  <table-material
+    [data]="tableData"
+    [emptyDataText]="'Nenhum prazo encontrado'"
+    [params]="tableParams"
+    [headers]="tableHeaders"
+    [selection]="true"
+    [paginator]="true"
+    [sort]="true"
+    [pageSizeOptions]="[5, 10]"
+    (selections)="getSelected($event)"
+  ></table-material>
+</container>
+

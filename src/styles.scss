@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap');
+@import url('assets/scss/snackbar.scss');
 
 html, body { height: 100%; }
 body { margin: 0; font-family: 'Montserrat', sans-serif; }
@@ -12,7 +13,6 @@ body { margin: 0; font-family: 'Montserrat', sans-serif; }
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 15px;
 
   &.end {
     flex-direction: row-reverse !important;
@@ -106,3 +106,4 @@ table {
   animation-delay: var(--fa-animation-delay,0s);
   animation-duration: var(--fa-animation-duration,1s);
 }
+

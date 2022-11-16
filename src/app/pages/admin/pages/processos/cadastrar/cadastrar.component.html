@@ -1,5 +1,86 @@
 <breadcrumb [params]="params"></breadcrumb>
 
-<container>
-  <p>cadastrar processo works!</p>
+<container [auto]=true>
+
+  <mat-stepper orientation="vertical" [linear]="false" #stepper>
+    <mat-step [stepControl]="formDadosPrincipais">
+      <form [formGroup]="formDadosPrincipais" autocomplete="off">
+        <ng-template matStepLabel>Dados Principais</ng-template>
+        <div class="row">
+          <div class="col-xs-12 col-md-4">
+            <mat-form-field appearance="outline" color="accent">
+              <mat-label for="numeroProcesso">Número do Processo</mat-label>
+              <input matInput placeholder="0000000-00.0000.0.00.0000" formControlName="numeroProcesso">
+              <mat-icon matSuffix>balance</mat-icon>
+            </mat-form-field>
+          </div>
+    
+          <div class="col-xs-12 col-md-4">
+            <mat-form-field appearance="outline" color="accent">
+              <mat-label>Instância</mat-label>
+              <input matInput placeholder="" formControlName="instancia">
+            </mat-form-field>
+          </div> 
+    
+          <div class="col-xs-12 col-md-4">
+            <mat-form-field appearance="outline" color="accent">
+              <mat-label for="tribunal">Tribunal</mat-label>
+              <input matInput placeholder="" formControlName="tribunal">
+            </mat-form-field>
+          </div> 
+    
+          <div class="col-xs-12 col-md-4">
+            <mat-form-field appearance="outline" color="accent">
+              <mat-label for="comarca">Comarca</mat-label>
+              <input matInput placeholder="" formControlName="comarca">
+            </mat-form-field>
+          </div> 
+    
+          <div class="col-xs-12 col-md-4">
+            <mat-form-field appearance="outline" color="accent">
+              <mat-label for="vara">Vara</mat-label>
+              <input matInput placeholder="" formControlName="vara">
+            </mat-form-field>
+          </div> 
+    
+          <div class="col-xs-12 col-md-4">
+            <mat-form-field appearance="outline" color="accent">
+              <mat-label for="valorCausa">Valor da Causa</mat-label>
+              <input matInput placeholder="R$ 0,00" formControlName="valorCausa" (blur)="setMaskCurrency($event)">
+            </mat-form-field>
+          </div>
+        </div>
+        <div>
+          <button mat-raised-button color="primary" matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="formDadosPartes">
+      <form [formGroup]="formDadosPartes" autocomplete="off">
+        <ng-template matStepLabel>Partes do Processo</ng-template>
+        
+        <mat-list>
+          <mat-list-item>
+            <div matListAvatar>NP</div>
+            <div mat-line>Nome da Pessoa</div>
+            <div mat-line>Documento da Pessoa</div>
+          </mat-list-item>
+        </mat-list>
+
+        <div>
+          <button mat-raised-button color="accent" class="me-2" matStepperPrevious>Back</button>
+          <button mat-raised-button color="primary" matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>You desire finish this registration?</p>
+      <div>
+        <button mat-raised-button color="accent" class="me-2" matStepperPrevious>Back</button>
+        <button mat-raised-button color="primary" (click)="onSubmit()">Cadastrar</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+
 </container>

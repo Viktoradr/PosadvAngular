@@ -14,10 +14,19 @@
     justify-content: space-between;
     width: 100%;
 
-    div {
+    .profile,
+    .menu-navbar {
       display: flex;
       flex-direction: row;
       align-items: center;
+    }
+
+    .menu-navbar {
+      a {
+        &:hover {
+          color: #fff;
+        }
+      }
     }
 
     .profile {

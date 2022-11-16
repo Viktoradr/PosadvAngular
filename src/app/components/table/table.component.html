@@ -61,5 +61,8 @@
 </ng-template>
 
 <ng-container *ngIf="hasPaginator">
-  <mat-paginator [pageSizeOptions]="pageSizeOptions" [attr.aria-label]="pageSizeText" [color]="opColor"></mat-paginator>
+  <mat-paginator 
+    [pageSizeOptions]="pageSizeOptions" 
+    [attr.aria-label]="pageSizeText" 
+    [color]="opColor"></mat-paginator>
 </ng-container>
