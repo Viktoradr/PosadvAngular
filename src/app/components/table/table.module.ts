@@ -4,6 +4,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { TableComponent } from './table.component';
+import { PipesModule } from 'src/app/shared/pipes/pipes.module';
 
 
 
@@ -19,6 +20,7 @@ import { TableComponent } from './table.component';
     MatTableModule,
     MatPaginatorModule,
     MatCheckboxModule,
+    PipesModule
   ]
 })
 export class TableMaterialModule { }

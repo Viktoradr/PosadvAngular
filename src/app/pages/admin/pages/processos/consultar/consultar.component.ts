@@ -35,8 +35,15 @@ export class ConsultarComponent implements OnInit {
       id: '1',
       numeroProcesso: '0000971-64.2018.5.13.0002',
       tribunal: 'Tribunal do Rio de Janeiro',
-      dataCadastro: '10/10/2021',
+      dataCadastro: new Date(),
       ativo: "Sim",
+    },
+    {
+      id: '2',
+      numeroProcesso: '0000222-64.2018.5.13.0002',
+      tribunal: 'Tribunal de São Paulo',
+      dataCadastro: new Date(),
+      ativo: "Não",
     },
   ];
 
@@ -52,6 +59,6 @@ export class ConsultarComponent implements OnInit {
   ngOnInit(): void {}
 
   getSelected(processos: IProcessoTable[]) {
-    console.log(processos);
+    console.log(processos)
   }
 }

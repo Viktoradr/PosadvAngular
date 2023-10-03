@@ -9,7 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { TableMaterialModule } from 'src/app/components/table/table.module';
-import { FormAMModule } from 'src/app/shared/angular-material/angular-material.module';
+import { FormAMModule } from 'src/app/shared/extensions/angular-material.module';
 
 
 @NgModule({

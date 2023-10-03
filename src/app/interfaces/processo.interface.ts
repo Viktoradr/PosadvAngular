@@ -4,7 +4,7 @@ export interface IProcessoTable {
   id: string;
   numeroProcesso: string;
   tribunal: string;
-  dataCadastro: string;
+  dataCadastro: Date;
   ativo: string;
 }
 
