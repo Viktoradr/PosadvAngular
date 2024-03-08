@@ -11,7 +11,12 @@ export class MetasComponent implements OnInit {
   params: BreadcrumbParams = {
     title: "Metas",
     subtitle: ""
-  };
+  }
+
+  metas = [
+    { title: 'Project Velocity', percent: 50},
+    { title: 'Process to be finished', percent: 20}
+  ]
 
   constructor() { }
 

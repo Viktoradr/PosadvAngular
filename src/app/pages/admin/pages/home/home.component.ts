@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   params: BreadcrumbParams = {
     title: "Home",
     subtitle: ""
-  };
+  }
 
   constructor() { }
 

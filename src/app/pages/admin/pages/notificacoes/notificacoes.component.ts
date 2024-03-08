@@ -11,11 +11,14 @@ export class NotificacoesComponent implements OnInit {
   params: BreadcrumbParams = {
     title: "Notificações",
     subtitle: ""
-  };
+  }
+
+  notificacoes = [
+    { title: 'Some placeholder content in a paragraph.', partMessage: 'And some muted small print.'}
+  ]
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 }

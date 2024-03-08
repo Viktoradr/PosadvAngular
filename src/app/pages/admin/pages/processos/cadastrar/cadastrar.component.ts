@@ -6,6 +6,7 @@ import { ProcessoService } from '../../../../../services/processo.service';
 import { BreadcrumbParams } from './../../../../../components/breadcrumb/breadcrumb.interface';
 import { formatCurrency } from 'src/app/shared/functions/mask';
 import { SnackService } from 'src/app/provider/snack/snack.service';
+import { limparNumero } from 'src/app/shared/functions/util';
 
 @Component({
   selector: 'cadastrar',
@@ -40,20 +41,15 @@ export class CadastrarComponent implements OnInit {
   ngOnInit(): void { }
 
   addParte(parte: IParte) {
-    console.log(parte);
+    console.log(parte)
   }
 
   onSubmit() {
-    console.log(this.formDadosPrincipais);
-    this.snack.open("success", "Processo cadastrado com sucesso");
+    //console.log(this.formDadosPrincipais)
+    this.snack.open("success", "Processo cadastrado com sucesso")
   }
 
   setMaskCurrency(event: any) {
-    const value = event.target.value;
-    console.log(value.replace(/\D/g,""))
-    const currency = formatNumber(value.replace(/\D/g,""), "pt-BR", "1.2-2");
-    console.log(currency);
-    console.log(formatCurrency(event))
-    this.formDadosPrincipais.get("valorCausa")?.setValue(currency);
+    this.formDadosPrincipais.get("valorCausa")?.setValue(limparNumero(event.target.value));
   }
 }

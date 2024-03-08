@@ -1,5 +1,12 @@
 <breadcrumb [params]="params"></breadcrumb>
 
 <container>
-  <p>cadastrar processo works!</p>
+  <ul class="list-group list-group-flush">
+    <ng-container *ngFor="let item of notificacoes">
+      <li class="list-group-item  text-white bg-transparent">
+        <p class="mb-1">{{item.title}}</p>
+        <small class="text-muted">{{item.partMessage}}</small>
+      </li>
+    </ng-container>
+  </ul>
 </container>

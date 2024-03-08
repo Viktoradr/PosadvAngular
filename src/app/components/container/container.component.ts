@@ -8,7 +8,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class ContainerComponent implements OnInit {
 
-  @Input('auto') auto = false;
+  @Input('auto') auto = false
 
   constructor(public sanitizer: DomSanitizer) {}
 

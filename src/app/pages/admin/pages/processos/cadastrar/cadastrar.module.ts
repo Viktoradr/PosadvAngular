@@ -12,7 +12,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { FormAMModule } from 'src/app/shared/extensions/angular-material.module';
 import { SnackModule } from 'src/app/provider/snack/snack.module';
 import { MatListModule } from '@angular/material/list';
-import {MatStepperModule} from '@angular/material/stepper';
+import { MatStepperModule } from '@angular/material/stepper';
+import { InputMoneyModule } from 'src/app/shared/extensions/input-money.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import {MatStepperModule} from '@angular/material/stepper';
     ContainerModule,
     ReactiveFormsModule,
     ContainerModule,
+    InputMoneyModule,
     FormAMModule,
     MatIconModule,
     SnackModule,

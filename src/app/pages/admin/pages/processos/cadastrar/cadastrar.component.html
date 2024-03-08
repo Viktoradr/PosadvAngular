@@ -46,7 +46,9 @@
           <div class="col-xs-12 col-md-4">
             <mat-form-field appearance="outline" color="accent">
               <mat-label for="valorCausa">Valor da Causa</mat-label>
-              <input matInput placeholder="R$ 0,00" formControlName="valorCausa" (blur)="setMaskCurrency($event)">
+              <input currencyMask matInput placeholder="R$ 0,00" 
+                formControlName="valorCausa" 
+                (input)="setMaskCurrency($event)">
             </mat-form-field>
           </div>
         </div>
@@ -59,12 +61,22 @@
       <form [formGroup]="formDadosPartes" autocomplete="off">
         <ng-template matStepLabel>Partes do Processo</ng-template>
         
-        <mat-list>
+        <mat-list class="mb-3">
           <mat-list-item>
             <div matListAvatar>NP</div>
-            <div mat-line>Nome da Pessoa</div>
+            <div mat-line>Autor(a) - Nome da Pessoa</div>
             <div mat-line>Documento da Pessoa</div>
           </mat-list-item>
+          <button mat-list-item >
+            <div matListAvatar class="add">
+              <mat-icon
+                  aria-hidden="false"
+                  class="text-muted"
+                  fontIcon="add"
+                  fontSet="material-icons-outlined">add</mat-icon>
+            </div>
+            <div mat-line>Adicionar</div>
+          </button>
         </mat-list>
 
         <div>
