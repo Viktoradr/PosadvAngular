@@ -58,7 +58,8 @@ export class TableComponent implements OnInit {
 
   isAllSelected() {
     const numSelected = this.selection.selected.length
-    const numRows = this.dataSource.data.length
+    const dataSource = new MatTableDataSource<object>(this.list);
+    const numRows = dataSource.data.length
     return numSelected === numRows
   }
 
@@ -69,7 +70,8 @@ export class TableComponent implements OnInit {
       return
     }
 
-    this.selection.select(...this.dataSource.data)
+    const dataSource = new MatTableDataSource<object>(this.list);
+    this.selection.select(...dataSource.data)
     this.eventSelected.emit(this.selection.selected)
   }
 
